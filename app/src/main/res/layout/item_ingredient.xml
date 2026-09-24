@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for a single row in the pantry list, one ingredient per row -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- Ingredient name, this takes up most of the row's width -->
+    <TextView
+        android:id="@+id/textIngredientName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="18sp"
+        tools:text="Eggs" />
+
+    <!-- Quantity and unit shown on the right-->
+    <TextView
+        android:id="@+id/textIngredientQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        tools:text="12 units" />
+
+</LinearLayout>
