@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.List;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fabAddIngredient = findViewById(R.id.fabAddIngredient);
         fabAddIngredient.setOnClickListener(view -> {
+            //navigation from this screen to AddIngredientActivity
+            Intent intent = new Intent(MainActivity.this, AddIngredientActivity.class);
+            startActivity(intent);
         });
     }
 

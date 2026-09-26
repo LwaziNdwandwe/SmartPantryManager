@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--This is the Screen for adding a new ingredient to the pantry -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!--This is the Field for the ingredient's name -->
+    <EditText
+        android:id="@+id/editIngredientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingredient name"
+        android:inputType="text" />
+
+    <!--This is the Field for the quantity-->
+    <EditText
+        android:id="@+id/editIngredientQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Quantity"
+        android:inputType="numberDecimal" />
+
+    <!--This is the field for the unit -->
+    <EditText
+        android:id="@+id/editIngredientUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Unit (e.g. cups, grams)"
+        android:inputType="text" />
+
+    <!--This saves the ingredient and returns to the Pantry List -->
+    <Button
+        android:id="@+id/buttonSaveIngredient"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Save Ingredient" />
+
+</LinearLayout>
