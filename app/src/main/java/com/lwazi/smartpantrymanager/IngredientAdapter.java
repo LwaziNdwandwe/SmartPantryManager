@@ -11,9 +11,11 @@ import java.util.List;
 public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.IngredientViewHolder> {
 
     private List<Ingredient> ingredientList;
+    private OnIngredientLongClickListener longClickListener;
 
-    public IngredientAdapter(List<Ingredient> ingredientList) {
+    public IngredientAdapter(List<Ingredient> ingredientList, OnIngredientLongClickListener longClickListener) {
         this.ingredientList = ingredientList;
+        this.longClickListener = longClickListener;
     }
 
     //this is called when the RecyclerView needs a brand new empty row
@@ -32,7 +34,18 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
         holder.textName.setText(ingredient.getName());
         //combines quantity and unit into one readable string
         holder.textQuantity.setText(ingredient.getQuantity() + " " + ingredient.getUnit());
+
+        holder.itemView.setOnLongClickListener(v -> {
+            longClickListener.onIngredientLongClick(ingredient);
+            return true; // tells Android "handled" so it doesn't also register as a normal click
+        });
     }
+
+    public interface OnIngredientLongClickListener{
+        void onIngredientLongClick(Ingredient ingredient);
+    }
+
+
 
     //this tells Android how many rows exist in total
     @Override
