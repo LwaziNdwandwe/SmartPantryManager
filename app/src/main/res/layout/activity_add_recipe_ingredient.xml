@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!--name of the ingredient this recipe requires -->
+    <EditText
+        android:id="@+id/editIngredientName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingredient Name" />
+
+    <!--how much of it is needed -->
+    <EditText
+        android:id="@+id/editQuantityRequired"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity Required"
+        android:inputType="numberDecimal" />
+
+    <!--this the unit its measured in -->
+    <EditText
+        android:id="@+id/editUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Unit (e.g. grams, cups)" />
+
+    <!--this saves this ingredient requirement and clears the form so another can be added -->
+    <Button
+        android:id="@+id/buttonSaveAndAddAnother"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save and Add Another Ingredient" />
+
+    <!--this finishes adding ingredients to this recipe and leaves the screen -->
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Done" />
+
+</LinearLayout>

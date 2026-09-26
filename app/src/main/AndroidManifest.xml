@@ -22,6 +22,10 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".AddRecipeActivity" android:label="Add Recipe"/>
+
+        <activity android:name=".AddRecipeIngredientActivity" android:label="Add Recipe Ingredients"/>
+
         <activity android:name=".AddIngredientActivity" android:label="Add Ingredient"/>
     </application>
 
